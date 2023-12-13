@@ -5,16 +5,24 @@ class Cart {
     this.cartId = cartId;
   }
 
+  /* Menambahkan product dan quantitynya
+   * dan menambahkan ke array  items[].
+   */
   addItem(product, quantity) {
     for (let i = 0; i < quantity; i++) {
       this.items.push(product);
     }
   }
 
+  /* Menghapus product dan quantitynya dari items
+   * dengan mencari namanya dengan filter.
+   */
   removeItem(product) {
     this.items = this.items.filter((item) => item !== product);
   }
 
+  /* Mau menghitung nama setiap productName ke productCount
+   */
   viewCart() {
     const productCount = [];
     for (const item of this.items) {

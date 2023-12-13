@@ -7,12 +7,12 @@ class Order {
   totalAmount = 0;
 
   createOrder(cart) {
-    // Menghitung jumlah dan total harga
+    /* Menghitung jumlah dan total harga */
     for (const item of cart.items) {
       const productName = item.productName;
       const price = item.price;
 
-      // Menambah jumlah dan total harga pada objek productInfo
+      /* Menambah jumlah dan total harga pada items[] */
       if (this.items[productName]) {
         this.items[productName].quantity++;
         this.items[productName].totalPrice += price;
