@@ -8,7 +8,7 @@ class Category {
 
   displayInfo() {
     console.log(
-      `Category Id: ${this.categoryId} \nCategory Name: ${this.categoryName}`
+      `\nCATEGORY:\nId: ${this.categoryId} \nName: ${this.categoryName}`
     );
   }
 
@@ -17,9 +17,11 @@ class Category {
   }
 
   Products() {
-    console.log(`Products in ${this.categoryName}:`);
+    console.log(`\nPRODUCTS IN ${this.categoryName}:`);
+    let i = 1;
     for (const product in this.products) {
-      console.log(this.products[product].productName);
+      console.log(`${i}. ${this.products[product].productName}`);
+      i++;
     }
   }
 }

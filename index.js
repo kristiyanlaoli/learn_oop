@@ -14,7 +14,7 @@ const laptop = new Product(
 const oppo5 = new Product(
   1254,
   "oppo5",
-  10,
+  50,
   "Powerful smarphone for all your needs"
 );
 
@@ -50,7 +50,7 @@ computers.Products();
 // implement cart => make new cart id:
 const cart1 = new Cart(1);
 
-// add item like laptop and oppo5
+// add item like laptop and oppo5. addItem(product, countItem).
 cart1.addItem(laptop, 1);
 cart1.addItem(oppo5, 2);
 cart1.addItem(laptop, 1);

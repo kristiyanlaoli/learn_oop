@@ -9,7 +9,7 @@ class Product {
 
   displayInfo() {
     console.log(
-      `PRODUCT: \nId: ${this.productId} \nName: ${this.productName} \nPrice: ${this.price} \nDescription: ${this.description}`
+      `\nPRODUCT: \nId: ${this.productId} \nName: ${this.productName} \nPrice: ${this.price} \nDescription: ${this.description}`
     );
   }
 

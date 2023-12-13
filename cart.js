@@ -16,7 +16,7 @@ class Cart {
   }
 
   viewCart() {
-    const productCount = {};
+    const productCount = [];
     for (const item of this.items) {
       const productName = item.productName;
       if (productCount[productName]) {
@@ -25,9 +25,11 @@ class Cart {
         productCount[productName] = 1;
       }
     }
-    console.log(`Total items in Cart:`);
+    console.log(`\nTOTAL ITEMS IN CART:`);
+    let i = 1;
     for (const productName in productCount) {
-      console.log(`${productName}: ${productCount[productName]}`);
+      console.log(`${i}. ${productName}: ${productCount[productName]}`);
+      i++;
     }
   }
 }

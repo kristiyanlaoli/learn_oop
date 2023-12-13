@@ -3,7 +3,7 @@ class Order {
   constructor(orderId) {
     this.orderId = orderId;
   }
-  items = {};
+  items = [];
   totalAmount = 0;
 
   createOrder(cart) {
@@ -29,17 +29,20 @@ class Order {
   }
   displayOrderDetails() {
     // Menampilkan hasil jumlah dan total harga berdasarkan productName
+    console.log(`\nORDER ${this.orderId} DETAIL:`);
+    let i = 1;
     for (const productName in this.items) {
       const quantity = this.items[productName].quantity;
       const totalPrice = this.items[productName].totalPrice;
 
       console.log(
-        `ProductName: ${productName}, Quantity: ${quantity}, Total Price: ${totalPrice}`
+        `${i}. ProductName: ${productName}, Quantity: ${quantity}, Total Price: ${totalPrice}`
       );
+      i++;
     }
 
     // Menampilkan total harga semua produk
-    console.log(`Total All Products Price: ${this.totalAmount}`);
+    console.log(`Total all products price: ${this.totalAmount}`);
   }
 }
 
